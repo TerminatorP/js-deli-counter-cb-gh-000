@@ -15,3 +15,13 @@ function nowServing(arr) {
   }
   return 'There is nobody waiting to be served!';
 }
+function currentLine(arr) {
+  let lineInfo = 'The line is currently:';
+  if (arr.length) {
+  for (let i = 0; i < arr.length; i++) {
+    lineInfo += ` ${arr.indexOf(arr[i])+1}. ${arr[i]}${arr.indexOf(arr[i])+1 !== arr.length ? ',' : ''}`;
+  }
+    return lineInfo;
+  }
+  return "The line is currently empty.";
+}
